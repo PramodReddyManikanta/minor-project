@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Login Page</title>
+</head>
+<body>
+
+    <div class="alert-box">
+        <p class="alert"></p>
+    </div>
+
+    <div class="login">
+        <h1 class="heading">login</h1>
+        <form action='/login' method='post'>
+        <input type="email" placeholder="email" autocomplete="off" class="email" id="email" name="email" required>
+        <input type="password" placeholder="password" autocomplete="off" class="password" id="password" name="password" required>
+        <button type="submit" class="submit-btn">log in</button>
+    </form>
+        <a href="register.html" class="link">don't have an account? Register one</a>
+    </div>
+
+    <!--<script type="module" src="javaScript/form.js"></script>-->
+    
+</body>
+</html>

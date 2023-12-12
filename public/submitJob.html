@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="submitJob.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid background">
+        <div class="row">
+            <div class="col-12 d-flex flex-row justify-content-end">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4vw" height="4vh" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+                <h1 class="form-group">JNTUH-UCEJ</h1>
+            </div>
+            <div class="col-12 text-center">
+
+                <a href="index.html"><img src="group-clipart-handshake-8.png" class="post_image m-4" /></a>
+                <h1 class="main_heading">Jobs and Facilities</h1>
+
+                <button class="button m-3" onclick="">My Account</button>
+                <button class="button m-3" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="main_heading m-auto">Submit A Job Ad</h1>
+            <form action="/submitJob" method="POST">
+                <div class="form-group col-md-12 col-lg-8 mt-4">
+                    <label for="JobTitle">Job Title/Business</label>
+                    <input type="text" class="form-control" id="JobTitle" name="JobTitle" required>
+                </div>
+                <div class="form-group col-md-12 col-lg-8">
+                    <label for="Category">Category</label>
+                    <select id="Category" class="form-control" name="Category" required>
+                        <option selected value="">Select Category</option>
+                        <option value="Teaching">Teaching</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="AutomobileRepair">AutomobileRepair</option>
+                        <option value="Driving">Driving</option>
+                        <option value="Carpentry">Carpentry</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-12 col-lg-8 mb-">
+                    <label for="JobDescription">Job/Business Description</label>
+                    <textarea class="form-control" name="JobDescription" placeholder="Include the details of business to attract customers" id="JobDescription" required></textarea>
+                </div>
+                <div class="form-group col-md-12 col-lg-8">
+
+                    <label for="UploadImage">Upload Photos</label>
+                    <input type="file" class="form-control-file" name="UploadImage" id="UploadImage" required>
+                </div>
+
+                <!--<div class="form-group">
+                        <label for="pricePH">Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="Give ur Price per hr" required> 
+                      </div>-->
+
+                <div class="form-group col-md-12 col-lg-8">
+                    <label for="ownerName">Name</label>
+                    <input type="text" class="form-control" name="ownerName" id="ownerName" required>
+                </div>
+
+                <div class="form-group col-md-12 col-lg-8">
+                    <label for="BNumber"> Business Phone Number</label>
+                    <input type="text" class="form-control" name="BNumber" id="BNumber" required>
+                </div>
+
+                <div class="form-group col-md-12 col-lg-8">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" name="location" id="location" placeholder="Give ur business/job location" required>
+                </div>
+
+                <!--   <p id="error">
+                              Error
+                            </p>-->
+                <div class="col-md-12">
+                    <p>
+
+                        By clicking 'Submit' you confirm that you have carefully read and understood all the facts, statements and conditions stated in the Terms of Use & Posting Rules of our website to which you unconditionally agree and accept as true and correct and constituting a binding agreement between us.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="button mb-2">Submit Ad</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
